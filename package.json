@@ -1,6 +1,7 @@
 {
-  "name": "ng-pokemon-trainers",
+  "name": "testing-angular",
   "version": "0.0.0",
+  "homepage": "./",
   "scripts": {
     "ng": "ng",
     "start": "node server.js",

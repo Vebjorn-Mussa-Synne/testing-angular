@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-pokemon-trainers": {
+    "testing-angular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-pokemon-trainers",
+            "outputPath": "dist/testing-angular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -89,10 +89,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ng-pokemon-trainers:build:production"
+              "browserTarget": "testing-angular:build:production"
             },
             "development": {
-              "browserTarget": "ng-pokemon-trainers:build:development"
+              "browserTarget": "testing-angular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -100,7 +100,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-pokemon-trainers:build"
+            "browserTarget": "testing-angular:build"
           }
         },
         "test": {
