@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const packageJson = require('./package.json')
+const path = require("path")
 
 // Middleware
 app.use(requireHTTPS);
@@ -8,7 +9,8 @@ app.use(express.static('./dist'));
 
 // Redirect app request to index.html
 app.get('/*', (req, res) => {
-  res.sendFile('index.html', {root: 'dist'});
+  //res.sendFile('index.html', {root: 'dist'});
+  res.sendFile(path.join(__dirname, './src', 'index.html'));
 });
 
 // Start server
