@@ -5,11 +5,13 @@ const path = require("path")
 
 // Middleware
 app.use(requireHTTPS);
-app.use(express.static('./dist'));
+//app.use(express.static('./dist'));
+app.use(express.static('./dist/' + packageJson.name));
 
 // Redirect app request to index.html
 app.get('/*', (req, res) => {
-  res.sendFile('index.html', {root: 'dist'});
+  res.sendFile('index.html', {root: 'dist/' + packageJson.name});
+ // res.sendFile('index.html', {root: 'dist'});
  // res.sendFile(path.join(__dirname, './src', 'index.html'));
 });
 
